@@ -1,0 +1,23 @@
+﻿<Window x:Class="MariaSQLTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MariaSQLTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="bn_DBOpen" Content="DB Open" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="bn_DBOpen_Click" Height="72"/>
+        <DataGrid x:Name="dg_Test" HorizontalAlignment="Left" Height="322" Margin="10,87,0,0" VerticalAlignment="Top" Width="772" ItemsSource="{Binding LoadDataBinding}"/>
+        <TextBox x:Name="tb_Query" HorizontalAlignment="Left" Height="23" Margin="99,10,0,0" TextWrapping="Wrap" Text="-" VerticalAlignment="Top" Width="593" KeyDown="tb_Query_KeyDown"/>
+        <Expander Header="Query Preset" HorizontalAlignment="Left" Height="46" Margin="99,36,0,0" VerticalAlignment="Top" Width="683" IsExpanded="True">
+            <Grid HorizontalAlignment="Left" Height="20" Margin="10,0,0,0" Width="663">
+                <Button x:Name="bn_Preset_Insert" Content="Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Click="Button_Click" Margin="81,0,0,0"/>
+                <Button x:Name="bn_Preset_Delete" Content="Delete" HorizontalAlignment="Left" Margin="161,0,0,0" VerticalAlignment="Top" Width="74" Click="bn_Preset_Delete_Click"/>
+                <Button x:Name="bn_Preset_Update" Content="Update" HorizontalAlignment="Left" Margin="241,0,0,0" VerticalAlignment="Top" Width="74" Click="bn_Preset_Update_Click"/>
+                <Button x:Name="bn_Preset_Select" Content="Select" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="bn_Preset_Select_Click"/>
+            </Grid>
+        </Expander>
+        <Button x:Name="bn_Query" Content="Execute Query" HorizontalAlignment="Left" Margin="697,10,0,0" VerticalAlignment="Top" Width="85" Height="23" Click="bn_Query_Click"/>
+    </Grid>
+</Window>
